@@ -273,9 +273,9 @@ def jogadaMaquina(tabuleiro, jogada):
     if jogada == 2:
         centro = confereJogadaCentral(tabuleiro)
         if not centro:
-            if tabuleiro["A"][2]:     
+            if tabuleiro["A"][2]:  
                 tabuleiro["C"][0] = "X"
-            elif tabuleiro["A"][1]:
+            elif tabuleiro["A"][1]:   
                 tabuleiro["B"][0] = "X"
             elif tabuleiro["C"][0]:
                 tabuleiro["A"][2] = "X"
@@ -284,7 +284,7 @@ def jogadaMaquina(tabuleiro, jogada):
             else:
                 tabuleiro["C"][0] = "X"
         else: 
-            tabuleiro["C"][0] = "X" # Jogada para existência de elemento central
+            tabuleiro["C"][2] = "X" # Jogada para existência de elemento central
         
     if jogada >= 3:
         oAlinhados = encontrarXganhos(tabuleiro, jogador="O")
